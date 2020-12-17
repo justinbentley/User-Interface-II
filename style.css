@@ -1,10 +1,18 @@
+*{
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+html{
+    font-size:62.5%;
+}
 .top{
     background-color: rgb(156, 156, 156);
 }
 h1 {
     font-weight: bold;
-    padding:10px;
-    margin-left:10px;
+    padding:1rem;
+    margin-left:1rem;
 }
 
 .nav-bar{
@@ -16,7 +24,7 @@ h1 {
 
 .nav-bar a{
     border:1px double black;
-    padding:5px;
+    padding:0.5rem;
     margin-bottom: 20px;
     margin-left:1px;
 }
@@ -24,19 +32,17 @@ h1 {
 
 .intro{
     display:flex;
-    
-
 }
 
 .big-image{
     width:50%;
-    margin:2px;
+    margin:2px 2px 2px 0px;
 }
 
 .info-box{
     padding:100px 40px;
     background-color: rgb(156, 156, 156);
-    margin:2px;
+    margin:2px 0px 2px 2px;
 }
 
 h2{
@@ -57,5 +63,92 @@ h2{
 .contact-me{
     text-align: center;
     background-color: rgb(156, 156, 156);
-    padding:10px;
+    padding:1rem;
+}
+
+/*media queries*/
+@media (max-width:800px){
+    .intro{
+        /*flex-direction: column;*/
+    }
+
+}
+/* this closes the 800px section*/
+
+/*phone*/
+@media (max-width:500px){
+    .intro{
+        flex-direction: column;
+    }
+    .top{
+        width:75%;
+        margin:auto;
+    }
+    .nav-bar{
+        flex-direction: column;
+        width:25%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:0;
+        margin-bottom:0;
+    }
+    h1{
+        text-align: center;
+    }
+    .nav-bar a {
+        text-align: center;
+    }
+    .big-image{
+        width:50%;
+        height:auto;
+        margin:auto;
+        padding:2px;
+    }
+    .info-box{
+        width:50%;
+        padding:2px;
+        background-color: rgb(156, 156, 156);
+        margin:auto;
+    }
+    .my-items{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.my-items img{
+    width:20%;
+    margin:2%; 
+}
+.contact-me{
+    width:75%;
+    margin:auto;
+}
+}
+
+@media(max-width:269px){
+    .intro{
+        flex-direction: column;
+    }
+    .info-box{
+        width:100%;
+        padding:3px 3px;
+        background-color: rgb(156, 156, 156);
+        margin:0;
+    }
+    .big-image{
+        width:70%;
+        height:20%;
+        margin:auto;
+        padding:2px;
+        background-color:peachpuff;
+    }
+}
+@media(max-width:189px){
+    .nav-bar{
+        display:flex;
+        margin-left:5%;
+        margin-top:0;
+        
+    }
 }
